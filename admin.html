@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Public Issue Reporter</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Public Issue Reporter</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="report.html">Report Issue</a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <!-- Not logged in -->
+  <section class="not-loggedin-section hidden">
+    <div class="not-loggedin-container">
+      <h2>You are not logged in.</h2>
+      <p>Please log in to access the admin dashboard.</p>
+      <a href="login.html"><button class="btn-login">Go to Login</button></a>
+    </div>
+  </section>
+
+  <!-- Admin dashboard -->
+  <section class="admin-section hidden">
+    <div class="admin-container">
+      <h2>Welcome, Admin 👋</h2>
+      <p>You can now manage all reports.</p>
+      <button onclick="logoutAdmin()">Logout</button>
+    </div>
+  </section>
+
+  <script>
+    const adminSection = document.querySelector(".admin-section");
+    const notLoggedInSection = document.querySelector(".not-loggedin-section");
+
+    const isLoggedIn = sessionStorage.getItem("isAdminLoggedIn");
+
+    if (isLoggedIn === "true") {
+      adminSection.classList.remove("hidden");
+    } else {
+      notLoggedInSection.classList.remove("hidden");
+    }
+
+    function logoutAdmin() {
+      sessionStorage.removeItem("isAdminLoggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

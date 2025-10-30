@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | Public Issue Reporter</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Public Issue Reporter</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="report.html">Report Issue</a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <section class="login-section">
+    <div class="login-container">
+      <h2>Admin Login</h2>
+      <p>Please enter your credentials to access the admin dashboard.</p>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter admin username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Login</button>
+      </form>
+
+      <p id="loginMsg" class="error-msg"></p>
+    </div>
+  </section>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const loginMsg = document.getElementById("loginMsg");
+    const ADMIN_USERNAME = "admin";
+    const ADMIN_PASSWORD = "12345";
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+        // ✅ Use sessionStorage so it resets when browser closes
+        sessionStorage.setItem("isAdminLoggedIn", "true");
+        window.location.href = "admin.html";
+      } else {
+        loginMsg.textContent = "❌ Invalid username or password";
+        setTimeout(() => (loginMsg.textContent = ""), 3000);
+      }
+    });
+  </script>
+</body>
+</html>
