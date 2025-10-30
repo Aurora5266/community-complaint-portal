@@ -78,22 +78,6 @@
     </table>
   </section>
 
-  <script>
-    const adminSection = document.querySelector(".admin-section");
-    const notLoggedInSection = document.querySelector(".not-loggedin-section");
-
-    const isLoggedIn = sessionStorage.getItem("isAdminLoggedIn");
-
-    if (isLoggedIn === "true") {
-      adminSection.classList.remove("hidden");
-    } else {
-      notLoggedInSection.classList.remove("hidden");
-    }
-
-    function logoutAdmin() {
-      sessionStorage.removeItem("isAdminLoggedIn");
-      window.location.href = "login.html";
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

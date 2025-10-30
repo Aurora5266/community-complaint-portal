@@ -273,7 +273,7 @@ header {
 }
 
 .status.incomplete { background: #ffcccc; color: #a30000; }
-.status.inprogress { background: #fff0b3; color: #a67c00; }
+.status.inprogress { background: #c9c9c6; color: #080807; }
 .status.complete { background: #ccffcc; color: #006600; }
 
 /* ===== Admin Table ===== */
@@ -306,7 +306,7 @@ header {
 .status-select {
   padding: 5px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #5c5959;
 }
 
 .btn-delete {
