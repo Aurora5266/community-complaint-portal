@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Public Issue Reporter</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <header>
-  <nav class="navbar">
-    <div class="logo">Public Issue Reporter</div>
-    <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="report.html">Report Issue</a></li>
-      <li><a href="admin.html">Admin</a></li>
-    </ul>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-  </nav>
-</header>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Public Issue Reporter</div>
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="report.html">Report Issue</a></li>
+        <li><a href="admin.html">Admin</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
 
+  <!-- Home Section -->
+  <section class="home-section">
+    <h2 class="section-title">Recent Public Issues</h2>
 
-<script src="script.js"></script>
+    <div class="issue-cards">
 
+      <div class="issue-card">
+        <img src="https://imgs.search.brave.com/Q0V1pwVLkE7SAV23vHJIVv_7Z9fH7svSpevcIvxeaCg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzUyLzk4LzA4/LzM2MF9GXzE1Mjk4/MDg1MF94bE52eDds/Ync2R1E1RXlVU2hx/ZjZOQzllT2NDTUlt/OS5qcGc" alt="Pipe broken">
+        <div class="issue-info">
+          <p><strong>Description:</strong> Water pipe broken causing water leakage in the street.</p>
+          <p class="status inprogress">Status: In Progress</p>
+        </div>
+      </div>
+
+      <div class="issue-card">
+        <img src="https://imgs.search.brave.com/XTBbdSMpUWzB7O_2PGzqgyxNlKzO1_coR8iZeJ8XxWI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/MGFlOWNkNzY4NGNm/NWIyYjMxNTJiNzcv/NjRjOGQwZDA0MTM3/Y2NhYzZjODhmYjcy/X1NjcmVlbnNob3Ql/MjAyMDIzLTA4LTAx/JTIwYXQlMjAxMi4z/MC40OC5wbmc" alt="Garbage waste">
+        <div class="issue-info">
+          <p><strong>Description:</strong> Mismanaged garbage waste overflowing near public dustbins.</p>
+          <p class="status complete">Status: Complete</p>
+        </div>
+      </div>
+
+      <div class="issue-card">
+        <img src="https://imgs.search.brave.com/j37Tww8IQxM_FaJyhCQsyRgsgors6ngaqat__fjBFD8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9vbGQt/YnJpY2std2FsbC1m/YWxsaW5nLWFwYXJ0/LWJhY2tncm91bmQt/dGltZS0xMDEzNTIy/MzEuanBn" alt="Temple wall broken">
+        <div class="issue-info">
+          <p><strong>Description:</strong> Temple wall broken due to recent storm, needs urgent repair.</p>
+          <p class="status inprogress">Status: In Progress</p>
+        </div>
+      </div>
+
+      <div class="issue-card">
+        <img src="https://imgs.search.brave.com/cldcPHO5PEwFAsv__JsIgMoaS9wpqGzNiXwFEEsocW4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM5/NDIzNjU3MC9waG90/by9kYWlseS1saWZl/LWluLWhhdmFuYS1j/dWJhLTIwMjIuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVJ0/cWNFQkVTNzJsR2Y3/XzBRSGRVUG5PeDAw/MEdISi04c1RQX0dE/dFlqbXc9" alt="Street light not working">
+        <div class="issue-info">
+          <p><strong>Description:</strong> Street lights not functioning properly near the main road.</p>
+          <p class="status incomplete">Status: Incomplete</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>

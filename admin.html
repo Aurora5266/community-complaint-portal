@@ -32,12 +32,50 @@
   </section>
 
   <!-- Admin dashboard -->
-  <section class="admin-section hidden">
-    <div class="admin-container">
-      <h2>Welcome, Admin 👋</h2>
-      <p>You can now manage all reports.</p>
-      <button onclick="logoutAdmin()">Logout</button>
-    </div>
+  <section class="admin-section">
+    <h2 class="section-title">Admin Dashboard</h2>
+
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td><img src="images/waterpollution.webp" alt="Water pollution"></td>
+          <td>Water pollution due to mixing of sewage in river channel.</td>
+          <td><span class="status incomplete">Incomplete</span></td>
+          <td>
+            <select class="status-select">
+              <option>Incomplete</option>
+              <option>In Progress</option>
+              <option>Complete</option>
+            </select>
+            <button class="btn-delete">Remove</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td><img src="images/brokenbridge.webp" alt="Bridge maintenance"></td>
+          <td>Maintenance of the old bridge is pending due to cracks on pillars.</td>
+          <td><span class="status inprogress">In Progress</span></td>
+          <td>
+            <select class="status-select">
+              <option>Incomplete</option>
+              <option selected>In Progress</option>
+              <option>Complete</option>
+            </select>
+            <button class="btn-delete">Remove</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
   </section>
 
   <script>
